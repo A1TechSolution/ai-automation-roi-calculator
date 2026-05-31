@@ -517,3 +517,40 @@ body {
         gap: 1.5rem;
     }
 }
+
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 1.5rem 1rem;
+        gap: 1.75rem;
+    }
+    
+    .header h1 {
+        font-size: 1.85rem;
+    }
+    
+    .subtitle {
+        font-size: 0.85rem;
+    }
+
+    .glass-card {
+        padding: 1.25rem 1rem;
+    }
+    
+    .massive-counter {
+        font-size: 2.5rem;
+    }
+    
+    .massive-counter-wrap .currency-symbol {
+        font-size: 1.5rem;
+    }
+    
+    .metrics-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .btn-cta {
+        padding: 0.9rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}
