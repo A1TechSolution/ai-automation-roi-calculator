@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive AI & Automation ROI Calculator | A1 Tech Solution</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="radial-glow glow-1"></div>
+    <div class="radial-glow glow-2"></div>
+
+    <div class="wrapper">
+        <!-- Navigation Back Link -->
+        <a href="../index.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span>Back to Showcase Hub</span>
+        </a>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-badge">
+                <div class="logo-box">A1</div>
+                <span>Financial Analysis Portal</span>
+            </div>
+            <h1>Interactive AI & Automation <span>ROI Calculator</span></h1>
+            <p class="subtitle">Calculate the exact operational hours and labor costs you reclaim by replacing manual processes with autonomous AI agents and automated webhook systems.</p>
+        </header>
+
+        <!-- Calculator Container -->
+        <div class="calculator-grid">
+            <!-- Left Side: Configurator -->
+            <section class="glass-card config-panel">
+                <h2>1. Adjust Your Business Inputs</h2>
+                <p class="section-desc">Drag the sliders below to match your team size, average labor rates, and the manual workload you want to automate.</p>
+                
+                <div class="sliders-list">
+                    <!-- Slider 1: Team Size -->
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <label for="input-team-size">Team Size (Employees)</label>
+                            <span class="value-badge badge-blue"><span id="val-team-size">10</span> Employees</span>
+                        </div>
+                        <input type="range" id="input-team-size" min="1" max="150" value="10" class="range-slider">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>75</span>
+                            <span>150</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 2: Average Hourly Wage -->
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <label for="input-hourly-wage">Average Hourly Cost (Wage + Overhead)</label>
+                            <span class="value-badge badge-purple">$<span id="val-hourly-wage">35</span>/hr</span>
+                        </div>
+                        <input type="range" id="input-hourly-wage" min="15" max="150" value="35" class="range-slider">
+                        <div class="slider-labels">
+                            <span>$15/hr</span>
+                            <span>$80/hr</span>
+                            <span>$150/hr</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 3: Weekly Manual Workload -->
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <label for="input-manual-hours">Manual Hours / Week (Per Employee)</label>
+                            <span class="value-badge badge-gold"><span id="val-manual-hours">15</span> hrs/wk</span>
+                        </div>
+                        <p class="input-subtitle">Data entry, cold calling, copy-pasting, routing support tickets.</p>
+                        <input type="range" id="input-manual-hours" min="1" max="40" value="15" class="range-slider">
+                        <div class="slider-labels">
+                            <span>1 hr</span>
+                            <span>20 hrs</span>
+                            <span>40 hrs</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 4: Annual AI System Investment -->
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <label for="input-agency-cost">Projected AI System Budget (Annual)</label>
+                            <span class="value-badge badge-cyan">$<span id="val-agency-cost">12,000</span>/yr</span>
+                        </div>
+                        <p class="input-subtitle">Expected automated system subscriptions + agency retainer.</p>
+                        <input type="range" id="input-agency-cost" min="3000" max="60000" step="1000" value="12000" class="range-slider">
+                        <div class="slider-labels">
+                            <span>$3,000</span>
+                            <span>$31,500</span>
+                            <span>$60,000</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Side: Metrics Dashboard -->
+            <section class="dashboard-panel">
+                <!-- Massive Cost Reclaim Box -->
+                <div class="glass-card savings-highlight">
+                    <h3>Projected Net Annual Savings</h3>
+                    <div class="massive-counter-wrap">
+                        <span class="currency-symbol">$</span>
+                        <span id="counter-savings" class="massive-counter">0</span>
+                    </div>
+                    <p class="savings-note">Money returned directly back to your company's bottom line every year.</p>
+                </div>
+
+                <!-- Secondary Metrics Cards -->
+                <div class="metrics-row">
+                    <!-- Hours Saved Card -->
+                    <div class="glass-card metric-mini">
+                        <div class="metric-header">
+                            <span class="metric-icon icon-hours">🕒</span>
+                            <h4>Annual Time Saved</h4>
+                        </div>
+                        <div class="metric-val"><span id="val-hours-saved">0</span> hrs</div>
+                        <p class="metric-desc">Operational hours reclaimed for high-value strategic growth.</p>
+                    </div>
+
+                    <!-- ROI Multiplier Card -->
+                    <div class="glass-card metric-mini">
+                        <div class="metric-header">
+                            <span class="metric-icon icon-roi">📈</span>
+                            <h4>Projected ROI</h4>
+                        </div>
+                        <div class="metric-val text-gold"><span id="val-roi-ratio">0.0</span>x</div>
+                        <p class="metric-desc">Return on your technology investment in the first 12 months.</p>
+                    </div>
+                </div>
+
+                <!-- Financial Comparison Chart Card -->
+                <div class="glass-card chart-card">
+                    <h3>Annual Cost Comparison</h3>
+                    <div class="comparison-bars">
+                        <!-- Bar 1: Manual Cost -->
+                        <div class="bar-group">
+                            <div class="bar-info">
+                                <span>Current Manual Cost</span>
+                                <strong id="lbl-manual-cost">$0</strong>
+                            </div>
+                            <div class="bar-track">
+                                <div id="bar-manual" class="bar-fill bar-red" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Bar 2: Automation Cost -->
+                        <div class="bar-group">
+                            <div class="bar-info">
+                                <span>A1 Tech Automation Cost</span>
+                                <strong id="lbl-automated-cost">$0</strong>
+                            </div>
+                            <div class="bar-track">
+                                <div id="bar-automated" class="bar-fill bar-emerald" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payback-indicator">
+                        <span>Estimated Break-Even Point: </span>
+                        <strong id="val-payback-months">0.0</strong> months
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Call To Action -->
+        <section class="glass-card cta-card">
+            <div class="cta-content">
+                <h2>Ready to Automate Your Manual Operations?</h2>
+                <p id="cta-dynamic-pitch">Based on your team size, manual workflows are costing you thousands of dollars in hidden labor overhead every year. Let us build custom, secure, self-running AI agents and webhook workflows tailored to your brand.</p>
+            </div>
+            <a href="https://a1-tech-solution.vercel.app/" target="_blank" class="btn-cta">
+                <span>Book a Free Automation Audit</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+        </section>
+    </div>
+
+    <!-- Script File -->
+    <script src="app.js"></script>
+</body>
+</html>
